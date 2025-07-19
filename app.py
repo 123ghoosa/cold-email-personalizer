@@ -5,7 +5,6 @@ from openai import OpenAI
 
 load_dotenv()
 
-print("API Key is:", os.getenv("OPENAI_API_KEY"))
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 # Load .env file with your OpenAI API key
