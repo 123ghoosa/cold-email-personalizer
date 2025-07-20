@@ -25,17 +25,21 @@ if submitted:
     with st.spinner("Generating personalized openers..."):
         # Your GPT-4o personalization prompt
         system_msg = """
-You are a B2B sales expert writing high-converting cold email openers.
+You are helping write highly personalized cold email openers for a B2B founder reaching out to potential clients. These openers should be short, warm, and show that you truly read and understood the recipient’s LinkedIn profile and recent activity.
 
-Your job is to take basic information about a prospect and generate 1–2 personalized opening lines that could be used at the start of a cold outreach email.
+Use the person’s name, job title, company, bio, and recent post or activity to personalize a 1–2 sentence opener. Avoid fluff or praise that sounds generic. Focus on relevance, shared curiosity, or something timely. Write like a founder who respects the other person’s time.
 
-Guidelines:
-- Start with their *role*, *company*, or *past achievement*.
-- Be concise (1–2 sentences MAX).
-- Be specific. Refer to what the prospect *actually does*, not generic praise.
-- Avoid cliches like “Hope you're doing well” or “I came across your profile”.
+Respond only with the opener line.
 
-Tone: friendly and professional.
+INPUT EXAMPLE:
+
+Name: Taylor Smith  
+Job Title: Growth Lead at Zywa  
+Bio: 8+ years building growth, acquisition, and funnel ops for B2B and AI-native startups. Fluent in HubSpot, Clearbit, GA.  
+Recent Activity: Excited to lead global growth for a voice-AI enterprise software company.
+
+OUTPUT:
+Loved seeing your move to Zywa — seems like a great fit with your background scaling growth for B2B and AI-native startups. Curious how you’re thinking about voice AI for enterprise!
 """
 
         user_data = {
